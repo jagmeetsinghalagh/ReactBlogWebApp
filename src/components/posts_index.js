@@ -13,14 +13,11 @@ class PostsIndex extends Component {
 
     renderPosts() {
         if ( this.props.posts.length > 0) {
-            console.log(this.props.posts[0].data);
             return this.props.posts[0].data.map(post => {
                 return (
                     <div className="card my-3" key = {post.id}>
                         <div className="card-body">
-                            <h4 className="card-title">{ post.title }</h4>
-                            <h6>{ post.categories }</h6>
-                            <p className="card-text">{ post.content }</p>
+                            <Link to={`/post/${post.id}`} className="card-title"><h4>{ post.title }</h4></Link>
                         </div>
                     </div>
                 );

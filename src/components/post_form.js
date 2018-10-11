@@ -46,6 +46,7 @@ class PostForm extends Component {
         });
     }
 
+
     render() {
         const { handleSubmit } = this.props;
 
@@ -64,6 +65,7 @@ class PostForm extends Component {
                         component={ this.renderTextArea }
                     />
                     <button type="submit" className="btn btn-block btn-primary">Submit</button>
+                    <button type="button" onClick= { () => { this.props.history.push('/') } } className="btn btn-block btn-dark">cancel</button>
                 </form>
             </div>
         );
